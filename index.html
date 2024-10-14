@@ -1,0 +1,154 @@
+<h1>Github pages
+  <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog de Tecnología y Hardware</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background-color: #fff;
+            padding: 20px;
+            max-width: 800px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #333;
+        }
+        h2 {
+            color: #4CAF50;
+        }
+        p {
+            line-height: 1.6;
+        }
+        .entry {
+            margin-bottom: 20px;
+        }
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+        .button:hover {
+            background-color: #45a049;
+        }
+        nav {
+            margin-bottom: 20px;
+        }
+        nav a {
+            margin: 0 10px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        nav a:hover {
+            background-color: #45a049;
+        }
+        section {
+            display: none;
+        }
+        section.active {
+            display: block;
+        }
+        code {
+            background-color: #f4f4f4;
+            padding: 5px;
+            display: block;
+            margin-bottom: 10px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Bienvenido a mi Blog de Tecnología</h1>
+        <nav>
+            <a href="#cpu" onclick="showSection('cpu')">CPU</a>
+            <a href="#git" onclick="showSection('git')">Tutorial sobre Git</a>
+        </nav>
+
+        <!-- Sección de CPU -->
+        <section id="cpu" class="active">
+            <div class="entry">
+                <h2>La Importancia de la CPU en los Dispositivos Modernos</h2>
+                <p>La CPU, o Unidad Central de Procesamiento, es el corazón de cualquier dispositivo tecnológico. Es la encargada de interpretar y ejecutar las instrucciones de los programas, coordinando el trabajo de otros componentes como la memoria RAM y la tarjeta gráfica. En los dispositivos modernos, la velocidad y eficiencia de la CPU han mejorado drásticamente, permitiendo la ejecución de aplicaciones más complejas y con mayor rendimiento.</p>
+                <p>Hoy en día, los procesadores con múltiples núcleos son comunes. Estos permiten que varias tareas se realicen simultáneamente, mejorando el rendimiento en operaciones como la edición de video, el diseño 3D y los videojuegos. Las CPUs modernas no solo son rápidas, sino que también son eficientes en términos de consumo de energía, lo cual es crucial para dispositivos móviles.</p>
+            </div>
+
+            <div class="entry">
+                <h2>¿Cómo Elegir una CPU Adecuada?</h2>
+                <p>Elegir una CPU adecuada para tus necesidades depende del uso que le vayas a dar a tu dispositivo. Aquí algunos factores clave a considerar:</p>
+                <ul>
+                    <li><strong>Número de núcleos:</strong> A mayor cantidad de núcleos, mejor rendimiento en multitareas.</li>
+                    <li><strong>Velocidad de reloj:</strong> Expresada en GHz, indica cuántas operaciones puede realizar la CPU por segundo. A mayor velocidad, mayor capacidad de procesamiento.</li>
+                    <li><strong>Cache:</strong> Una mayor cantidad de memoria cache permite que la CPU acceda más rápidamente a los datos que necesita.</li>
+                    <li><strong>Consumo energético:</strong> CPUs más eficientes pueden reducir el consumo de batería en dispositivos portátiles.</li>
+                </ul>
+                <p>En resumen, si usas tu dispositivo para tareas básicas como navegar por internet o trabajar con documentos, una CPU de gama media será suficiente. Pero si realizas tareas más exigentes como programación, edición de video o gaming, necesitarás una CPU más potente.</p>
+            </div>
+        </section>
+
+        <!-- Sección de Tutorial sobre Git -->
+        <section id="git">
+            <h2>Tutorial sobre Git</h2>
+            <p>Git es una herramienta fundamental en el desarrollo de software. Se utiliza para rastrear los cambios en los archivos de un proyecto, permitiendo a los desarrolladores trabajar de forma colaborativa sin perder el control sobre el historial de versiones.</p>
+
+            <h3>1. Inicialización del Repositorio Local</h3>
+            <p>Para empezar a usar Git, primero necesitas crear un repositorio en tu máquina local. Esto se hace con el siguiente comando:</p>
+            <code>git init</code>
+            <p>Este comando inicializa un nuevo repositorio en el directorio actual, permitiendo que comiences a rastrear los cambios realizados en los archivos.</p>
+
+            <h3>2. Creación y Uso de Branches (Ramas)</h3>
+            <p>Las ramas en Git permiten desarrollar nuevas características o realizar cambios importantes sin afectar el código principal (generalmente en la rama <code>main</code> o <code>master</code>). Para crear una nueva rama, usa:</p>
+            <code>git branch nombre-de-la-rama</code>
+            <p>Después de crear la rama, puedes cambiarte a ella con:</p>
+            <code>git checkout nombre-de-la-rama</code>
+            <p>Una vez hayas trabajado en esa rama y realizado los cambios, puedes fusionarla con la rama principal utilizando:</p>
+            <code>git merge nombre-de-la-rama</code>
+            <p>Esto integrará los cambios de la nueva rama en la rama principal, permitiendo que otros los utilicen.</p>
+            < alt="Ejemplo de uso de ramas en Git">
+
+            <h3>3. Conectar con un Repositorio Remoto en GitHub</h3>
+            <p>Una vez que has trabajado localmente en tu proyecto, es útil conectarlo a un repositorio remoto en GitHub para que otros puedan acceder a él. Para hacerlo, primero necesitas crear un repositorio en GitHub, luego conecta tu repositorio local con el remoto utilizando:</p>
+            <code>git remote add origin https://github.com/usuario/nombre-del-repositorio.git</code>
+            <p>Finalmente, puedes subir tus cambios al repositorio remoto usando:</p>
+            <code>git push -u origin master</code>
+            <alt=Conectar repositorio local con GitHub>
+
+            <h3>Beneficios del Control de Versiones</h3>
+            <p>El uso de Git permite un control preciso sobre las versiones del proyecto, facilitando la colaboración y evitando conflictos entre los cambios de diferentes desarrolladores. Además, la posibilidad de crear ramas asegura que se puedan probar nuevas ideas sin comprometer la estabilidad del código principal.</p>
+        </section>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            // Oculta todas las secciones
+            const sections = document.querySelectorAll('section');
+            sections.forEach(section => section.classList.remove('active'));
+
+            // Muestra solo la sección seleccionada
+            const selectedSection = document.getElementById(sectionId);
+            selectedSection.classList.add('active');
+        }
+    </script>
+</body>
+</html
